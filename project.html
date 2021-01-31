@@ -67,6 +67,7 @@
 		left:30px;
 	}
 	#underhb meter{
+		padding-left:2%;
 		width:200px;
 		position:relative;
 	}
@@ -187,12 +188,16 @@
 		border-radius:0px 10px 10px 0px;
 		border:1px solid black;
 		border-left:none;
-		left:1445px;
-	}
-	.menu:hover{
+		left:1445px; 
+	} 
+	/*.menu:hover{  //버튼 transform 없애봄
 		transform:scale(.9);
 		cursor:pointer;
-	}
+	}*/
+	.menu:focus{ 
+		border-left:none; 
+		outline:none;
+	} 
 </style>
 </head>
 <body id="body" onload="onlo()">
