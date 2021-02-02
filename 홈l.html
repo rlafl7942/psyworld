@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>hi</title>
+	<title>home_left</title>
+	<style>
+		body{
+			width:316px;
+			flex-direction: column;
+		}
+		#profile{
+			flex-direction: column;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#today{
+			display: flex;
+			align-items: center;
+			margin-top:15%;
+			width:70%;
+			height:35px;
+			border:2px solid #A6A6A6;
+			border-width: thin;
+			border-radius:8px;
+		}
+		#photo{
+			background-color: black;
+			margin-top:3%;
+			width:70%;
+			height:250px;
+		}
+		#info{
+			margin-top:5%;
+			width:70%;
+			height:160px;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+		}
+		#profileMenu{
+			margin-top: 5%;
+			width:70%;
+			height:26px;
+		}
+		#psyworldInfo{
+			
+		}
+	</style>
 </head>
-<body style="width:316px">
-<h1>안녕 나는 홈L이야.</h1>
+<body>
+	<div id="profile">
+		<div id="today">
+			<text style="color:#298FA6; font-weight: bold; padding-left:3%;">TODAY IS...</text>
+		</div>
+		<div id="photo">
+			<img>
+		</div>
+		<div id="info">
+			<text>안뇽 내 이름은 예리얌 :-)</text>
+		</div>
+		<span id="profileMenu">
+			<text style="color:#298FA6">▶</text><text style="font-size:12px; font-weight: bold;">EDIT</text>
+			<text style="color:#298FA6">▶</text><text style="font-size:12px; font-weight: bold;">HISTORY</text>
+		</span>
+	</div>
+	<hr style="width:70%">
+	<div id="psyworldInfo">
+
+	</div>
 </body>
 </html>
