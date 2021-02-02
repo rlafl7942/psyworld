@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html style="width:840px">
 <head>
-	<title>hi</title>
+	<title>profile</title>
+<style>
+	@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+	p{
+		display: inline-block;
+		position: absolute;
+		font-size: 35px;
+		margin-left: 20px
+	}
+	html,body{
+		font-family: 'Jua', sans-serif;
+	}
+	@keyframes boo{
+		from {font-size:500%;color:blue;}
+		to {font-size:1000%;color:green;}
+	}
+	#animation{
+		animation-name:boo;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		position:relative;
+		top:200px;
+	}
+</style>
 </head>
-<body style="width:316px">
-<h1>안녕 나는 프로필R이야</h1>
-<p>키히키히킿킿키힠힣키히</p>
-<p>프로필 r 수정!</p>
+<body style="width:840px">
+<image src="images/부정빈.jpg" style="width: 30%;height: 80%;"></image>
+<p><span style="color:#298FA6;font-size: 45px">부정빈</span><br>1999년 4월 어느날 도곡동,<br>화목한 가정에서 이남매 중 막내로 태어남<br>분포초등학교를 졸업하고 용문중학교 입학<br>졸업 후 동천고등학교 입학<br>졸업 후 양지 메가스터디 기숙학원 입소<br>퇴소 후 세종대학교 컴퓨터공학과 재학 중...</p>
+<span id="animation">부정빈</span>
 </body>
 </html>

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html style="width:310px; padding-left: 10px">
 <head>
 	<title>hi</title>
+<style>
+	ul{
+		list-style:none;
+   		padding-left:0px;
+	}
+	ul img{
+		width:20px;
+		height:20px;
+		margin-right: 10px;
+	}
+	h3{
+		margin-top:40px;
+		margin-bottom:0px;
+		color:#298FA6;
+	}
+</style>
 </head>
-<body style="width:250px; height:750px">
-<h1>안녕 나는 프로필L이야.</h1>
-<p> 안녕 난 영화야 이건 내가 방금 테스트를 위해 추가함 </p>
+<body style="width:310px">
+<h3>Profile</h3><hr style="background-color:#298FA6;height:1px">
+<ul>
+	<li onclick="change2(this)"><img src="icons/person.png">내 소개</li><hr>
+	<li onclick="change2(this)"><img src="icons/group.png">내 인맥</li><hr>
+	<li onclick="change2(this)"><img src="icons/star.png">내 즐겨찾기</li><hr>
+</ul>
+<script src="newproject.js"></script>
 </body>
 </html>
