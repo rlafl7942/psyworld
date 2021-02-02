@@ -8,10 +8,10 @@
 			flex-direction: column;
 		}
 		#profile{
-			flex-direction: column;
 			display:flex;
 			align-items: center;
 			justify-content: center;
+			flex-direction: column;
 		}
 		#today{
 			display: flex;
@@ -28,6 +28,9 @@
 			margin-top:3%;
 			width:70%;
 			height:250px;
+			display: flex;
+			text-align: center;
+			justify-content: center;
 		}
 		#info{
 			margin-top:5%;
@@ -40,11 +43,19 @@
 		}
 		#profileMenu{
 			margin-top: 5%;
+			display:flex;
+			align-items: flex-end;
 			width:70%;
 			height:26px;
 		}
 		#psyworldInfo{
-			
+			display:flex;
+			flex-direction: column;
+			align-self: flex-start;
+			justify-content: flex-end;
+			width:70%;
+			height:100px;
+			margin-left:15%;
 		}
 	</style>
 </head>
@@ -54,19 +65,23 @@
 			<text style="color:#298FA6; font-weight: bold; padding-left:3%;">TODAY IS...</text>
 		</div>
 		<div id="photo">
-			<img>
+			<img src="홈사진.jpeg" width="100%">
 		</div>
 		<div id="info">
-			<text>안뇽 내 이름은 예리얌 :-)</text>
+			<text>ㄱHㄱl면.. 죽는ㄷr..</text>
 		</div>
 		<span id="profileMenu">
 			<text style="color:#298FA6">▶</text><text style="font-size:12px; font-weight: bold;">EDIT</text>
 			<text style="color:#298FA6">▶</text><text style="font-size:12px; font-weight: bold;">HISTORY</text>
+			<text style="padding-left:35%; color:#A6A6A6">▲</text>
+			<text style="color:#A6A6A6">▼</text>
 		</span>
+		<hr style="width:70%">
+		<div id="psyworldInfo">
+			<text style="font-size:19px; color:#000f96; font-weight: bolder;">싸이월드</text>
+			<text style="font-size: 12px; color:#E66E28">frontend@psyworld.com</text>
+		</div>
 	</div>
-	<hr style="width:70%">
-	<div id="psyworldInfo">
 
-	</div>
 </body>
 </html>
