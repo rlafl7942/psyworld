@@ -15,8 +15,21 @@
             text-decoration: none;
             color:black;
         }
+        #content{
+            display:none;
+        }
     </style>
-    <script src="diary.js"></script>
+    <script>
+        function toggle(){
+            var show = document.getElementById("content");
+            if (show.style.display==="block"){
+                show.style.display="none";
+            }
+            else{
+                show.style.display="block";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="body">
@@ -25,9 +38,9 @@
         </h3>
         <hr>
         <ul class="nav">
-            <li>내 다이어리</li>
-            <ul>
-                <li><a href="" onclick="changeView()">일기장</a></li>
+            <li onclick="toggle()">내 다이어리</li>
+            <ul id="content">
+                <li><a href="">일기장</a></li>
                 <li><a href="">끄적끄적</a></li>
             </ul>
             <li><a href="">교환일ㄱi..</a></li>
