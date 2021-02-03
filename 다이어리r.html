@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diary_right</title>
+    <style>
+        body{
+            width:843px;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #calendar{
+            width:90%;
+            height:100px;
+            margin-top:2%;
+            border:2px solid #A6A6A6;
+            border-radius: 5px;
+        }
+        #plan{
+            width:90%;
+            height:50px;
+            display: flex;
+            align-items: center;
+        }
+        #diary{
+            width:90%;
+            height:650px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border:2px solid #A6A6A6;
+            border-radius: 5px;
+        }
+        #content{
+            width:90%;
+            height:90%;
+        }
+        span{
+            font-size:18px;
+            color:#298FA6;
+            font-weight: bolder;
+        }
+        #essay{
+            font-size:20px;
+            margin-top:3%;
+            margin-bottom: 5%;
+        }
+        #comment{
+            height:150px;
+            background-color:#EAEAEA;
+            padding-left:1%;
+            padding-top:1%;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="calendar"></div>
+    <div id="plan">
+        <text style="color:#7a7a7a; font-size:18px;">일정</text>
+        <text style="padding-left:2%; color:#A6A6A6">일정/기념일이 없습니다.</text>
+    </div>
+    <div id="diary">
+        <div id="content">
+            <span>2021년 2월 3일 수</span>
+            <div id="essay">
+                나때문에 슬퍼하고, 죽고싶어해야돼, 후회도 해야돼,<br>
+                누굴봐도 나만 생각해야되고, 무엇보다 날 절대 의심해선 안돼,<br>
+                나한테 참견해서도 안돼 귀찮으니까, 욕도 잘한다구.<br>
+                하지만 내가 필요로 할땐 항상 있어야돼, 애정결핍이니까,<br>
+                눈치가 빨라야돼 난 다혈질이니까, 가르치려들면 그땐 죽어,<br>
+                아...... 약 좀 사다줘, 난 잔병치레가 많거든.<br>
+                부정맥도 있어 심실상성 빈맥이라구 수술도 받아야해.<br><br>
+
+                자, 이제 날 사랑해봐.<br>
+                못할거면 매정하게 버려.<br>
+                서럽게 울어라도보게.<br>
+            </div>
+            <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
+            <div id="setting">
+                <text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text>
+            </div>
+            <hr style="color:#EAEAEA">
+            <div id="comment">
+                <p>부정빈 : 퍼가염~♥</p>
+                <p>변영화 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>김예리 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

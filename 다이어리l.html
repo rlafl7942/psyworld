@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diary_left</title>
+    <style>
+        .body{
+            width:316px;
+        }
+        li{
+            list-style-image: url("icons/folder.png");
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+    </style>
+    <script src="diary.js"></script>
 </head>
 <body>
-    
+    <div class="body">
+        <h3 style="color:#298FA6">
+            DIARY
+        </h3>
+        <hr>
+        <ul class="nav">
+            <li>내 다이어리</li>
+            <ul>
+                <li><a href="" onclick="changeView()">일기장</a></li>
+                <li><a href="">끄적끄적</a></li>
+            </ul>
+            <li><a href="">교환일ㄱi..</a></li>
+            <li><a href="">오늘의 급식</a></li>
+        </ul>
+    </div>
 </body>
 </html>
