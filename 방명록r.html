@@ -1,0 +1,201 @@
+<!--방명록 오른쪽 --> 
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var cnt = 3;
+
+		function clickOk(innerGuest) {
+			cnt2 = cnt -1;
+			var obj = document.getElementById("innerGuest");
+			var back = document.getElementById("body");
+			var after = document.getElementById("b"+cnt2);
+			var newDiv = document.createElement("div");
+			newDiv.innerHTML = '<div id="b'+cnt+' " class="writedInfo"><span style="margin-left: 2%"> No.'+cnt+'</span><span style="margin-left: 2%; color: #15336F">익명인</span><img src="images/home.png" style="width: 16px;height:16px; margin-left: 1px;"><span style="margin-left: 10px; color: #AAABAD" >(2021.02.05 01:29)</span><span style="float: right; margin-left: 5px; margin-right: 5px">신고</span><span style="float: right; margin-left: 5px;">|</span><span style="float: right; margin-left: 5px;">삭제</span><span style="float: right; margin-left: 5px;">|</span><span style="float: right;">비밀로 하기</span></div><div class="writedImgAndText"> <img class="guestBookImg" src="images/profile1.png"><textarea class="writedText" name="writedText" rows="10" cols="33" readonly>'+obj.value+ '</textarea></div><div> </div><div class="writeComment"> <!--댓글 달기--><textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea><button type="button" style="position:relative; bottom: 28px; left: 20px;width:60px; height: 60px">확인</button></div>';
+			back.insertBefore(newDiv,after);
+			cnt++;
+			
+		}
+
+	</script>
+	<style>
+
+		body{ /*container*/
+            width:843px;
+            display: flex;
+            align-items: center;
+            flex-direction: column; /*위에서 아래*/
+        }
+
+        textarea {
+        	resize: none;
+        	/*height: 160px;*/
+        }
+
+        textarea:focus {
+        	outline: none; /*눌렀을 때 굵어지는 거 없앰*/
+        }
+
+        .inputText {
+        	border: 1px solid #AAABAD;
+        	width: 580px;
+        	height: 160px;
+        }
+
+		.guest {
+			width: 800px;
+		}
+
+		.topBtn {
+			width: 800px;
+			height: 20px;
+			margin-top: 1%;
+		}
+
+		#writing {
+			width: 800px;
+			height: 220px;
+			background-color: #EBEBEB;
+			border-top: 1px solid #AAABAD;
+			border-bottom: 1px solid #AAABAD;
+		}
+
+		.guestBookImg {
+			width: 165px;
+			height: 165px;
+		}
+
+		#writingImgAndText {
+			position: relative;
+			top : 8%;
+			left: 3%;
+		}
+
+		.writed {
+			width: 800px;
+			height: 500px;
+		}
+
+		.writedInfo {
+			width: 800px;
+			height: 20px;
+			background-color: #EBEBEB;
+			border-top: 1px solid #AAABAD;
+			margin-top: 7%;
+
+			padding: 2% 0;
+		}
+
+		.writedImgAndText {
+			width: 800px;
+			height: 200px;
+			padding: 3%;
+		}
+
+		.writeComment {
+			width: 800px;
+			height: 70px;
+			background-color: #EBEBEB;
+
+			padding: 2% 0%;
+		}
+
+		.writedText {
+			border: 0px;
+			width: 580px;
+			height: 160px;
+		}
+
+		.commentText {
+			border: 1px solid #AAABAD;
+			height: 60px;
+			width: 650px;
+			margin-left: 3%
+		}
+
+	</style>
+</head>
+<body id="body">
+	<div class="topBtn" style="margin-bottom: 2%%"> <!--1. 상단 버튼-->
+
+		<button type="button" style="position: relative; float: right;">
+					방명록관리</button>
+		<button type="button" style="position: relative; float: right; margin-right: 1%">
+					글꼴설정</button>
+	</div>
+
+	<br>
+
+	<div id="writing"> <!--2. 방명록 쓰는 칸-->
+		<div id="writingImgAndText">
+			<img class="guestBookImg" src="images/guestBook.png">
+			<textarea id="innerGuest" class="inputText" name="guestText" rows="10" cols="33" ></textarea>
+		</div>
+		<br>
+		<button type="button" style="position: relative; float: right; margin-right: 3%" onclick="clickOk(innerGuest)">
+					확인</button>
+	</div>
+
+	<div id="b2" class="writed"> <!------------------------------------------작성된 방명록-->
+		<div class="writedInfo"> <!--쓴 사람 정보-->
+				<span style="margin-left: 2%"> No.2</span>
+				<span style="margin-left: 2%; color: #15336F">김예리</span>
+				<img src="images/home.png" style="width: 16px;height: 16px; margin-left: 1px;">
+				<span style="margin-left: 10px; color: #AAABAD" >(2021.02.05 01:29)</span>
+				
+				<span style="float: right; margin-left: 5px; margin-right: 5px">신고</span>
+				<span style="float: right; margin-left: 5px;">|</span>
+				<span style="float: right; margin-left: 5px;">삭제</span>
+				<span style="float: right; margin-left: 5px;">|</span>
+				<span style="float: right;">비밀로 하기</span>
+		</div>
+
+		<div class="writedImgAndText"> <!--쓴 내용--> 
+			<img class="guestBookImg" src="images/profile2.png">
+			<textarea class="writedText" name="writedText" rows="10" cols="33" readonly>내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~</textarea>
+		</div>
+
+		<div> <!--댓글-->
+			
+		</div>
+
+		<div class="writeComment"> <!--댓글 달기-->
+			<textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea>
+			<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px">확인</button>
+		</div>
+	</div>
+
+	<div class="writed"> <!--3. 작성된 방명록-->
+		<div class="writedInfo"> <!--쓴 사람 정보-->
+				<span style="margin-left: 2%"> No.1</span>
+				<span style="margin-left: 2%; color: #15336F">부정빈</span>
+				<img src="images/home.png" style="width: 16px;height: 16px; margin-left: 1px;">
+				<span style="margin-left: 10px; color: #AAABAD" >(2021.02.05 01:27)</span>
+				
+				<span style="float: right; margin-left: 5px; margin-right: 5px">신고</span>
+				<span style="float: right; margin-left: 5px;">|</span>
+				<span style="float: right; margin-left: 5px;">삭제</span>
+				<span style="float: right; margin-left: 5px;">|</span>
+				<span style="float: right;">비밀로 하기</span>
+		</div>
+
+		<div class="writedImgAndText"> <!--쓴 내용--> 
+			<img class="guestBookImg" src="images/profile3.png">
+			<textarea class="writedText" name="writedText" rows="10" cols="33" readonly >	누나 ㅋ 도토리좀  </textarea>
+		</div>
+
+		<div> <!--댓글-->
+			
+		</div>
+
+		<div class="writeComment"> <!--댓글 달기-->
+			<textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea>
+			<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px">확인</button>
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
