@@ -53,21 +53,31 @@
             background-color:#EAEAEA;
             padding-left:1%;
             padding-top:1%;
+            flex-direction: column;
         }
-        button{
+        #change{
             position: relative;
             left:470px;
             background-color: white;
             border-radius: 5px;
         }
     </style>
+    <script>
+        function writecmt(){
+            var a = document.getElementsByTagName("input");
+			var list = document.getElementById("comment");
+            var plus=document.createElement('p');
+			plus.innerHTML=a[0].value;
+            list.appendChild(plus);
+        }
+    </script>
 </head>
-<body onload="writeDiary()">
+<body>
     <div id="calendar"></div>
     <div id="plan">
         <text style="color:#7a7a7a; font-size:18px;">일정</text>
         <text style="padding-left:2%; color:#A6A6A6">일정/기념일이 없습니다.</text>
-        <button onclick="location.href='diaryWrite.html'">글쓰기</button>
+        <button id="change" onclick="location.href='diaryWrite.html'">글쓰기</button>
     </div>
     <div id="diary">
         <div id="content">
@@ -91,9 +101,16 @@
             </div>
             <hr style="color:#EAEAEA">
             <div id="comment">
-                <p>부정빈 : 퍼가염~♥</p>
+                <div id="write">
+                    <text>댓글 입력 : </text>
+                    <input id="comt" type="text" name="cmt">
+                    <button onclick="writecmt()">등록</button>
+                </div>
+                <div id="cmtlist">
+                <p>부정빈 : 퍼가염~♡</p>
                 <p>변영화 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
                 <p>김예리 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                </div>
             </div>
         </div>
     </div>
