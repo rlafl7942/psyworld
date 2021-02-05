@@ -87,8 +87,20 @@
 		}
 		li{
 			list-style-position: inside;
+			border-bottom:1px solid #A6A6A6;
+			margin-bottom: 2%;
+			padding-bottom: 1%;
 		}
 	</style>
+	<script>
+		function clickoneline(){ /*일촌평 등록*/
+			var cmt = document.getElementById("onelinesay").value;
+			var list = document.getElementById("sayList");
+			var plus=document.createElement('li');
+			plus.innerHTML=cmt;
+			list.appendChild(plus);
+		}
+	</script>
 </head>
 <body>
 	<text id="title" style="padding-left:6%">Updated news</text>
@@ -129,21 +141,15 @@
 		<div id="inputdiv">
 			<text id="title" style="padding:0 3% 0 1%">Friends say</text>
 			<form>
-				<input type="text" name="say"></input>
+				<input id="onelinesay" type="text" name="say"></input>
 			</form>
-			<button style="margin-left:2%">확인</button>
+			<button style="margin-left:2%" onclick="clickoneline()">확인</button>
 		</div>
 		<div id="showdiv">
-			<ul>
+			<ul id="sayList">
 				<li>김예리 들렀다 감~</li>
-				<div style="background-color:#A6A6A6; width:96%; height:1px; margin:5px 0px 5px 0px;"></div>
-
 				<li>우와아아아악 너무 피곤해</li>
-				<div style="background-color:#A6A6A6; width:96%; height:1px; margin:5px 0px 5px 0px;"></div>
-
 				<li>그만 하고 자고 싶다..제발..</li>
-				<div style="background-color:#A6A6A6; width:96%; height:1px; margin:5px 0px 5px 0px;"></div>
-
 			</ul>
 		</div>
 	</div>
