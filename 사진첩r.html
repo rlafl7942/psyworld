@@ -3,6 +3,30 @@
 <html>
 <head>
 
+<script>
+	
+	const clickBtnComment = (num) => {
+
+			const inputText = document.querySelector(`#commentText${num}`)
+			const text = document.createElement('p')
+			const parent = document.querySelector(`#comment${num}`)
+
+			const addSpace = document.querySelector('#picToPicSpace')
+			const space = document.createElement('div')
+
+			if (inputText.value === '') {
+				return
+			}
+
+			text.textContent = '익명인 : ' + inputText.value
+			space.innerHTML = '<br><br>'
+
+			parent.appendChild(text)
+			addSpace.appendChild(space)
+
+		}
+</script>
+
 <style>
 
 	body{ /*container*/
@@ -55,11 +79,12 @@
 </style>
 
 
+
 </head>
 <body>
 	<br>
 	<section>
-		<div id="1" class="pic"> <!--사진 시작-->
+		<div id="picDiv1" class="pic"> <!--사진 시작-->
 
 			<div class="picInfo"> <!--사진 제목-->
 
@@ -104,21 +129,24 @@
 				</span>
 			</div>
 
-			<div class="comment" style="padding: 1%"> <!--댓글-->
+			<div id="comment1" class="comment" style="padding: 1%"> <!--댓글-->
 				<p>김예리 : ㅎㅇ</p>
 				<p>부정빈 : 퍼가요~❤</p>
 			</div>
 
 			<div> <!--댓글 등록-->
 				<form style="text-align: center;">
-					댓글 <input type=“text” size=“1000” value=" ">
-					<button type="button">저장</button>
+					댓글 <input id="commentText1" type=“text” size=“1000” value="">
+					<button type="button"  onclick="clickBtnComment(1)">저장</button>
 				</form>
 			</div>
 
 		</div> <!--사진 끝-->
 
 		<!--------------------------------------------------------->
+		<div id="picToPicSpace">
+			
+		</div>
 
 		<div id="2" class="pic"> <!--사진 시작-->
 
@@ -165,15 +193,15 @@
 				</span>
 			</div>
 
-			<div class="comment" style="padding: 1%"> <!--댓글-->
+			<div id="comment2"class="comment" style="padding: 1%"> <!--댓글-->
 				<p>김예리 : 퍼가요~❤</p>
 				<p>부정빈 : 퍼가요~❤</p>
 			</div>
 
 			<div> <!--댓글 등록-->
 				<form style="text-align: center;">
-					댓글 <input type=“text” size=“1000” value=" ">
-					<button type="button">저장</button>
+					댓글 <input id="commentText2" type=“text” size=“1000” value=" ">
+					<button type="button" onclick="clickBtnComment(2)">저장</button>
 				</form>
 			</div>
 

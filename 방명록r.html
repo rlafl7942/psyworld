@@ -3,15 +3,29 @@
 <html>
 <head>
 	<script>
-		var cnt = 3;
+		let cnt = 3;
 
 		function clickOk(innerGuest) {
 			cnt2 = cnt -1;
 			var obj = document.getElementById("innerGuest");
 			var back = document.getElementById("body");
-			var after = document.getElementById("b"+cnt2);
+			//var after = document.getElementById("b"+cnt2);
+			var after = document.getElementById(`b${cnt2}`);
 			var newDiv = document.createElement("div");
-			newDiv.innerHTML = '<div id="b'+cnt+' " class="writedInfo"><span style="margin-left: 2%"> No.'+cnt+'</span><span style="margin-left: 2%; color: #15336F">익명인</span><img src="images/home.png" style="width: 16px;height:16px; margin-left: 1px;"><span style="margin-left: 10px; color: #AAABAD" >(2021.02.05 01:29)</span><span style="float: right; margin-left: 5px; margin-right: 5px">신고</span><span style="float: right; margin-left: 5px;">|</span><span style="float: right; margin-left: 5px;">삭제</span><span style="float: right; margin-left: 5px;">|</span><span style="float: right;">비밀로 하기</span></div><div class="writedImgAndText"> <img class="guestBookImg" src="images/profile1.png"><textarea class="writedText" name="writedText" rows="10" cols="33" readonly>'+obj.value+ '</textarea></div><div> </div><div class="writeComment"> <!--댓글 달기--><textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea><button type="button" style="position:relative; bottom: 28px; left: 20px;width:60px; height: 60px">확인</button></div>';
+			newDiv.setAttribute('id', `b${cnt}`)
+
+			newDiv.innerHTML = `
+			<div class="writedInfo">
+			<span style="margin-left: 2%"> No.${cnt}</span>
+			<span style="margin-left: 2%; color: #15336F">익명인</span>
+			<img src="images/home.png" style="width: 16px;height:16px; margin-left: 1px;">
+			<span style="margin-left: 10px; color: #AAABAD" >(2021.02.05 01:29)</span>
+			<span style="float: right; margin-left: 5px; margin-right: 5px">신고</span>
+			<span style="float: right; margin-left: 5px;">|</span>
+			<span style="float: right; margin-left: 5px;">삭제</span>
+			<span style="float: right; margin-left: 5px;">|</span>
+			<span style="float: right;">비밀로 하기</span></div>
+			<div class="writedImgAndText"> <img class="guestBookImg" src="images/profile1.png"><textarea class="writedText" name="writedText" rows="10" cols="33" readonly>${obj.value}</textarea></div><div> </div><div class="writeComment"> <!--댓글 달기--><textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea><button type="button" style="position:relative; bottom: 28px; left: 20px;width:60px; height: 60px">확인</button></div>`;
 			back.insertBefore(newDiv,after);
 			cnt++;
 			
@@ -116,26 +130,28 @@
 	</style>
 </head>
 <body id="body">
-	<div class="topBtn" style="margin-bottom: 2%%"> <!--1. 상단 버튼-->
 
-		<button type="button" style="position: relative; float: right;">
-					방명록관리</button>
-		<button type="button" style="position: relative; float: right; margin-right: 1%">
-					글꼴설정</button>
-	</div>
+	<div id="writeNode">
+		<div class="topBtn" style="margin-bottom: 2%%"> <!--1. 상단 버튼-->
 
-	<br>
-
-	<div id="writing"> <!--2. 방명록 쓰는 칸-->
-		<div id="writingImgAndText">
-			<img class="guestBookImg" src="images/guestBook.png">
-			<textarea id="innerGuest" class="inputText" name="guestText" rows="10" cols="33" ></textarea>
+			<button type="button" style="position: relative; float: right;">
+						방명록관리</button>
+			<button type="button" style="position: relative; float: right; margin-right: 1%">
+						글꼴설정</button>
 		</div>
-		<br>
-		<button type="button" style="position: relative; float: right; margin-right: 3%" onclick="clickOk(innerGuest)">
-					확인</button>
-	</div>
 
+		<br>
+
+		<div id="writing"> <!--2. 방명록 쓰는 칸-->
+			<div id="writingImgAndText">
+				<img class="guestBookImg" src="images/guestBook.png">
+				<textarea id="innerGuest" class="inputText" name="guestText" rows="10" cols="33" ></textarea>
+			</div>
+			<br>
+			<button type="button" style="position: relative; float: right; margin-right: 3%" onclick="clickOk(innerGuest)">
+						확인</button>
+		</div>
+	</div>	
 	<div id="b2" class="writed"> <!------------------------------------------작성된 방명록-->
 		<div class="writedInfo"> <!--쓴 사람 정보-->
 				<span style="margin-left: 2%"> No.2</span>
@@ -164,6 +180,7 @@
 			<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px">확인</button>
 		</div>
 	</div>
+
 
 	<div class="writed"> <!--3. 작성된 방명록-->
 		<div class="writedInfo"> <!--쓴 사람 정보-->
