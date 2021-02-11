@@ -20,15 +20,32 @@
         }
     </style>
     <script>
+
         function toggle(){
             var show = document.getElementById("content");
-            if (show.style.display==="block"){
+            if (show.style.display=="block"){
                 show.style.display="none";
             }
             else{
                 show.style.display="block";
             }
         }
+
+        OBJECT_BOLD = null;　
+		// 볼드체로 바뀐 객체를 기억해둘 변수.
+
+	    function changeToBold(obj) {
+
+	    	var objPic = document.getElementById(obj);
+
+　　         objPic.style.fontWeight = "bold";
+
+　    		if(OBJECT_BOLD) {　　// 이전 객체의 볼드 속성을 없앤다.
+　　　 		   OBJECT_BOLD.style.fontWeight = "";
+　     		}
+　   		
+			OBJECT_BOLD = objPic;　　// 현재 객체를 저장해 둔다.
+		}
     </script>
 </head>
 <body>
@@ -38,13 +55,12 @@
         </h3>
         <hr>
         <ul class="nav">
-            <li onclick="toggle()">내 다이어리</li>
+            <li id="1" onclick="toggle();changeToBold(1);">내 다이어리</li>
             <ul id="content">
-                <li><a href="">일기장</a></li>
-                <li><a href="">끄적끄적</a></li>
+                <li><a href="다이어리r2.html" target=rightIf id="2" onclick="changeToBold(2)">일기장</a></li>
+                <li><a href="다이어리r3.html" target=rightIf id="3" onclick="changeToBold(3)">끄적끄적</a></li>
             </ul>
-            <li><a href="">교환일ㄱi..</a></li>
-            <li><a href="">오늘의 급식</a></li>
+            <li><a href="다이어리r4.html" target=rightIf id="4" onclick="changeToBold(4)">우리의 교환일기</a></li>
         </ul>
     </div>
 </body>
