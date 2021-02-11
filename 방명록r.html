@@ -25,11 +25,37 @@
 			<span style="float: right; margin-left: 5px;">삭제</span>
 			<span style="float: right; margin-left: 5px;">|</span>
 			<span style="float: right;">비밀로 하기</span></div>
-			<div class="writedImgAndText"> <img class="guestBookImg" src="images/profile1.png"><textarea class="writedText" name="writedText" rows="10" cols="33" readonly>${obj.value}</textarea></div><div> </div><div class="writeComment"> <!--댓글 달기--><textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea><button type="button" style="position:relative; bottom: 28px; left: 20px;width:60px; height: 60px">확인</button></div>`;
+			<div class="writedImgAndText"> <img class="guestBookImg" src="images/profile1.png"><textarea class="writedText" name="writedText" rows="10" cols="33" readonly>${obj.value}</textarea></div>
+			<div class="writeComment">
+			<div id="parent${cnt}"> </div>
+
+			<div> <!--댓글 달기-->
+
+			<textarea id="a${cnt}" class="commentText" name="guestText" rows="10" cols="33" ></textarea><button type="button" style="position:relative; bottom: 28px; left: 20px;width:60px; height: 60px" onclick="clickCommentOk(${cnt})">확인</button></div></div>`;
 			back.insertBefore(newDiv,after);
 			cnt++;
 			
 		}
+
+		const clickCommentOk = (num) => {
+			const inputText = document.querySelector(`#a${num}`)
+			const text = document.createElement('p')
+			const parent = document.querySelector(`#parent${num}`)
+
+			const spaceOf = document.querySelector(`#spaceOf`)
+			const spaceDiv = document.createElement('div')
+
+
+			text.textContent = '익명인 : ' + inputText.value
+			parent.appendChild(text)
+
+			spaceDiv.innerHTML = '<br><br>'
+
+			if(num == 2)
+			{
+				spaceOf.appendChild(spaceDiv)
+			}
+		}	
 
 	</script>
 	<style>
@@ -107,11 +133,11 @@
 		}
 
 		.writeComment {
-			width: 800px;
-			height: 70px;
+			width: 765px;
+			/*height: 70px;*/
 			background-color: #EBEBEB;
 
-			padding: 2% 0%;
+			padding: 2% 2%;
 		}
 
 		.writedText {
@@ -171,14 +197,20 @@
 			<textarea class="writedText" name="writedText" rows="10" cols="33" readonly>내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~내가 들렸다네~~</textarea>
 		</div>
 
-		<div> <!--댓글-->
-			
-		</div>
+		<div class="writeComment"><!--댓글-->
+			<div id="parent2"> 
+				
+			</div>
 
-		<div class="writeComment"> <!--댓글 달기-->
-			<textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea>
-			<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px">확인</button>
+			<div> <!--댓글 달기-->
+				<textarea id="a2" class="commentText" name="guestText" rows="10" cols="33" ></textarea>
+				<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px" onclick="clickCommentOk(2)">확인</button>
+			</div>
 		</div>
+	</div>
+
+	<div id="spaceOf">
+
 	</div>
 
 
@@ -201,13 +233,15 @@
 			<textarea class="writedText" name="writedText" rows="10" cols="33" readonly >	누나 ㅋ 도토리좀  </textarea>
 		</div>
 
-		<div> <!--댓글-->
-			
-		</div>
+		<div class="writeComment"><!--댓글-->
+			<div id="parent1"> 
+				
+			</div>
 
-		<div class="writeComment"> <!--댓글 달기-->
-			<textarea  class="commentText" name="guestText" rows="10" cols="33" ></textarea>
-			<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px">확인</button>
+			<div> <!--댓글 달기-->
+				<textarea id="a1" class="commentText" name="guestText" rows="10" cols="33" ></textarea>
+				<button type="button" style="position:relative; bottom: 28px; left: 20px;width: 60px; height: 60px" onclick="clickCommentOk(1)">확인</button>
+			</div>
 		</div>
 	</div>
 
