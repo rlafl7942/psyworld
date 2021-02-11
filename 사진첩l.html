@@ -22,6 +22,7 @@
 			OBJECT_BOLD = objPic;　　// 현재 객체를 저장해 둔다.
 		}
 
+
 	</script>
 
 	<style>
@@ -49,7 +50,7 @@
 	</style>
 
 </head>
-<body>
+<body onload="changeToBold(1)">
 	<header> <!--photo album 제목-->
 		<h3>PHOTO ALBUM</h3>
 		<hr>
@@ -57,11 +58,13 @@
 
 	<nav> <!--사진첩 폴더 목록-->
 		<ul>
-			<li><a href="" id="1" onclick="changeToBold(1)">좋은 시간</a>
-			<li><a href="" id="2" onclick="changeToBold(2)">좋은 사람들</a>
-			<li><a href="" id="3" onclick="changeToBold(3)">좋은 추억</a>
-			<li><a href="" id="4" onclick="changeToBold(4)">또 하나 알아간다..</a>
+			<li><a href="사진첩r.html" target="rightIf" id="1" onclick="changeToBold(1)">좋은 시간</a>
+			<li><a href="사진첩r2.html" target="rightIf" id="2" onclick="changeToBold(2)">좋은 사람들</a>
+			<li><a href="사진첩r3.html" target="rightIf" id="3" onclick="changeToBold(3)">좋은 추억</a>
+			<li><a href="사진첩r4.html" target="rightIf" id="4" onclick="changeToBold(4)">또 하나 알아간다..</a>
 		</ul>
 	</nav>
+
+	<footer include-html="/다이어리l.html"></footer>
 </body>
 </html>
