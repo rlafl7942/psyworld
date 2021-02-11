@@ -13,7 +13,7 @@
         }
         #calendar{
             width:90%;
-            height:100px;
+            
             margin-top:2%;
             border:2px solid #A6A6A6;
             border-radius: 5px;
@@ -52,13 +52,24 @@
             background-color:#EAEAEA;
             padding-left:1%;
             padding-top:1%;
+            margin-bottom:1%;
             flex-direction: column;
         }
+        
         #change{
             position: relative;
             left:470px;
             background-color: white;
             border-radius: 5px;
+        }
+        .newContent{
+            padding-left:5%;
+        }
+        .title{
+            padding-left:9%;
+        }
+        .title>textarea{
+            margin-left: 5%;
         }
     </style>
     <script>
@@ -69,20 +80,43 @@
 			plus.innerHTML='익명인 : ' + a[num].value;
             list[num].appendChild(plus);
         }
+    
+        function newDiarywrite(){
+            var title=document.getElementById("diarytitle").value;
+            var content=document.getElementById("diarycontent").value;
+            var back=document.getElementById("body");
+            var after=document.getElementById("diary");
+            var newDiary=document.createElement("div");
+            newDiary.setAttribute('id','diary')
+            newDiary.innerHTML= '<div id="content"><span>'+title+'</span><div id="essay">'+content+'</div><hr style="border-bottom:1px dashed #A6A6A6; border-top:none;"><div id="setting"><text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text></div><hr style="color:#EAEAEA"><div class="comment"><div id="write"><text>댓글 입력 : </text><input class="comt" type="text" name="cmt"><button onclick="writecmt(0)">등록</button></div></div></div>'
+            //newDiary.innerHTML=title;
+            back.insertBefore(newDiary,after);
+        }
     </script>
 </head>
-<body>
-    <div id="calendar"></div>
+<body id="body">
+    <div id="calendar">
+        <div class="title">
+            <text style="font-size:15px;font-weight: bolder;">제목 : </text>
+            <textarea id="diarytitle" rows="1" cols="70" minlength="1"></textarea>
+        </div>
+        <div class="newContent">
+            <div class="writearea">
+                <text style="font-weight: bolder;font-size: 15px;;">다이어리 내용 : </text>
+                <textarea id="diarycontent" rows="5" cols="70"></textarea>
+                <button onclick="newDiarywrite()">등록하기</button>
+            </div>
+        </div>
+    </div>
     <div id="plan">
         <text style="color:#7a7a7a; font-size:18px;">일정</text>
         <text style="padding-left:2%; color:#A6A6A6">일정/기념일이 없습니다.</text>
-        <button id="change" onclick="location.href='diaryWrite.html'">글쓰기</button>
     </div>
     <div id="diary">
         <div id="content">
-            <span>뿡뿡이의 일기</span>
+            <span>일기장</span>
             <div id="essay">
-                뿡뿡이는 주황색이다. 그리고 방구를 뀐다.
+                오늘은 밥을 먹고~ 그리고 어~~~ 제육볶음~~ 맛있다~~
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
@@ -106,9 +140,9 @@
 
     <div id="diary">
         <div id="content">
-            <span>짜잔형의 일기</span>
-            <div id="essay">
-                짜잔형은 .. 뭔지 모르겠다.
+            <span>내가 좋아하는 노래</span>
+            <div id="essay" style="text-align: center;">
+                내가 좋아하는 노래는 바로바로~~~~~~~    
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">

@@ -13,7 +13,7 @@
         }
         #calendar{
             width:90%;
-            height:100px;
+            
             margin-top:2%;
             border:2px solid #A6A6A6;
             border-radius: 5px;
@@ -52,13 +52,24 @@
             background-color:#EAEAEA;
             padding-left:1%;
             padding-top:1%;
+            margin-bottom:1%;
             flex-direction: column;
         }
+        
         #change{
             position: relative;
             left:470px;
             background-color: white;
             border-radius: 5px;
+        }
+        .newContent{
+            padding-left:5%;
+        }
+        .title{
+            padding-left:9%;
+        }
+        .title>textarea{
+            margin-left: 5%;
         }
     </style>
     <script>
@@ -69,21 +80,45 @@
 			plus.innerHTML='익명인 : ' + a[num].value;
             list[num].appendChild(plus);
         }
+    
+        function newDiarywrite(){
+            var title=document.getElementById("diarytitle").value;
+            var content=document.getElementById("diarycontent").value;
+            var back=document.getElementById("body");
+            var after=document.getElementById("diary");
+            var newDiary=document.createElement("div");
+            newDiary.setAttribute('id','diary')
+            newDiary.innerHTML= '<div id="content"><span>'+title+'</span><div id="essay">'+content+'</div><hr style="border-bottom:1px dashed #A6A6A6; border-top:none;"><div id="setting"><text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text></div><hr style="color:#EAEAEA"><div class="comment"><div id="write"><text>댓글 입력 : </text><input class="comt" type="text" name="cmt"><button onclick="writecmt(0)">등록</button></div></div></div>'
+            //newDiary.innerHTML=title;
+            back.insertBefore(newDiary,after);
+        }
     </script>
 </head>
-<body>
-    <div id="calendar"></div>
+<body id="body">
+    <div id="calendar">
+        <div class="title">
+            <text style="font-size:15px;font-weight: bolder;">제목 : </text>
+            <textarea id="diarytitle" rows="1" cols="70" minlength="1"></textarea>
+        </div>
+        <div class="newContent">
+            <div class="writearea">
+                <text style="font-weight: bolder;font-size: 15px;;">다이어리 내용 : </text>
+                <textarea id="diarycontent" rows="5" cols="70"></textarea>
+                <button onclick="newDiarywrite()">등록하기</button>
+            </div>
+        </div>
+    </div>
     <div id="plan">
         <text style="color:#7a7a7a; font-size:18px;">일정</text>
         <text style="padding-left:2%; color:#A6A6A6">일정/기념일이 없습니다.</text>
-        <button id="change" onclick="location.href='diaryWrite.html'">글쓰기</button>
     </div>
     <div id="diary">
         <div id="content">
-            <span>2021년 2월 11일 예리의 일기</span>
+            <span>예리의 일기</span>
             <div id="essay">
-                오늘은 아침 10시에 일어나서 핸드폰을 하다가<br>
-                영화언니한테 일어나라고 혼났다.<br>
+                오늘 글쓰기 기능을 만들다가..<br>
+                몇시간동안 안됐는데..<br>
+                드디어 됐다~!~!히히
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
@@ -97,8 +132,8 @@
                     <button onclick="writecmt(0)">등록</button>
                 </div>
                 <div class="cmtlist">
-                <p>부정빈 : 하하하!</p>
-                <p>변영화 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>부정빈 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>변영화 : ㅊㅋㅊㅋ~!~!</p>
                 </div>
             </div>
         </div>
@@ -106,9 +141,11 @@
 
     <div id="diary">
         <div id="content">
-            <span>2021년 2월 10일 정빈이의 일기</span>
-            <div id="essay">
-                오늘은 정말 공부를 하기 싫은 날이다.
+            <span>영화의 일기</span>
+            <div id="essay" style="text-align: center;">
+                오늘 언니와 함께 공부하려고 카페에 갔다.<br>
+                그런데 너무 졸렸다..<br>
+                그래도 열심히 했다~!~!
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
@@ -122,8 +159,8 @@
                     <button onclick="writecmt(1)">등록</button>
                 </div>
                 <div class="cmtlist">
-                <p>김예리 : 나도 안함ㅋㅋ</p>
-                <p>변영화 : 쨔스~!</p>
+                <p>김예리 : 정말 멋져~!~!~</p>
+                <p>부정빈 : 쨔스~!</p>
             </div>
         </div>
     </div>

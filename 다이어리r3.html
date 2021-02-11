@@ -13,7 +13,7 @@
         }
         #calendar{
             width:90%;
-            height:100px;
+            
             margin-top:2%;
             border:2px solid #A6A6A6;
             border-radius: 5px;
@@ -52,13 +52,24 @@
             background-color:#EAEAEA;
             padding-left:1%;
             padding-top:1%;
+            margin-bottom:1%;
             flex-direction: column;
         }
+        
         #change{
             position: relative;
             left:470px;
             background-color: white;
             border-radius: 5px;
+        }
+        .newContent{
+            padding-left:5%;
+        }
+        .title{
+            padding-left:9%;
+        }
+        .title>textarea{
+            margin-left: 5%;
         }
     </style>
     <script>
@@ -69,21 +80,43 @@
 			plus.innerHTML='익명인 : ' + a[num].value;
             list[num].appendChild(plus);
         }
+    
+        function newDiarywrite(){
+            var title=document.getElementById("diarytitle").value;
+            var content=document.getElementById("diarycontent").value;
+            var back=document.getElementById("body");
+            var after=document.getElementById("diary");
+            var newDiary=document.createElement("div");
+            newDiary.setAttribute('id','diary')
+            newDiary.innerHTML= '<div id="content"><span>'+title+'</span><div id="essay">'+content+'</div><hr style="border-bottom:1px dashed #A6A6A6; border-top:none;"><div id="setting"><text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text></div><hr style="color:#EAEAEA"><div class="comment"><div id="write"><text>댓글 입력 : </text><input class="comt" type="text" name="cmt"><button onclick="writecmt(0)">등록</button></div></div></div>'
+            //newDiary.innerHTML=title;
+            back.insertBefore(newDiary,after);
+        }
     </script>
 </head>
-<body>
-    <div id="calendar"></div>
+<body id="body">
+    <div id="calendar">
+        <div class="title">
+            <text style="font-size:15px;font-weight: bolder;">제목 : </text>
+            <textarea id="diarytitle" rows="1" cols="70" minlength="1"></textarea>
+        </div>
+        <div class="newContent">
+            <div class="writearea">
+                <text style="font-weight: bolder;font-size: 15px;;">다이어리 내용 : </text>
+                <textarea id="diarycontent" rows="5" cols="70"></textarea>
+                <button onclick="newDiarywrite()">등록하기</button>
+            </div>
+        </div>
+    </div>
     <div id="plan">
         <text style="color:#7a7a7a; font-size:18px;">일정</text>
         <text style="padding-left:2%; color:#A6A6A6">일정/기념일이 없습니다.</text>
-        <button id="change" onclick="location.href='diaryWrite.html'">글쓰기</button>
     </div>
     <div id="diary">
         <div id="content">
             <span>끄적끄적</span>
             <div id="essay">
-                싸이월드를 만들었는데..<br>
-                싸이월드가 부활한다니~!~!
+                진짜 글 하나하나 바꾸는 것도 ㄹㅇ 개귀찮다..
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
@@ -107,18 +140,9 @@
 
     <div id="diary">
         <div id="content">
-            <span>나는..그녀와.....헤어졌ㄷr..</span>
+            <span>으익으익</span>
             <div id="essay" style="text-align: center;">
-                헤어진 후에 내가 해야 할 것들.<br><br>
-                손가락에 끼고 있던 <span style="color:rgb(86, 208, 212);">반지 던져버리기</span><br>
-                책상에 있던 너와의 <span style="color:rgb(57, 114, 0)">사진 태워버리기</span><br>
-                온통 기념일이 적힌 <span style="color:orange">달력 바꿔버리기</span><br>
-                휴지통에 니가 사준 <span style="color:rgb(255, 104, 180)">인형 갖다버리기</span><br>
-                휴대폰에 저장된 니 <span style="color:rgb(177, 70, 219)">번호 없애버리기</span><br>
-                눈물로 읽어 내려간 <span style="color:rgb(86, 208, 212)">편지 찢어버리기</span><br><br>
-                그리고, 그리고...<br>
-                상처투성이가 되어버린<br>
-                내 마음에 새겨진 <span style="color:rgb(247, 45, 45)">너의 이름 지워버리기...</span>
+                호호힛!
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
