@@ -1,8 +1,9 @@
-	@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap');
 	html,body{
 		background-color:#A6A6A6;
-		font-family: 'Jua', sans-serif;
 		height:100%;
+		font-family: '돋움';
+		font-weight:bold;
 	}
 	#page{
 		display:inline-block;
@@ -61,7 +62,7 @@
 	#dotleft p{
 		display:inline-block;
 		position:absolute;
-		margin:40px 70px 0px 70px;
+		padding:30px 50px 0px 80px;
 	}
 	#dotright{
 		display:inline-block;
@@ -187,10 +188,11 @@
 		width:100px;
 		height:60px;
 		border-radius:0px 10px 10px 0px;
-		border:2px solid black;
+		border:1px solid navy;
 		border-left:none;
 		margin:3px;
 		margin-left:0px;
+		font-size: 20px;
 	}
 	#button button:focus{
 		border-left:none;

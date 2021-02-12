@@ -9,8 +9,8 @@
 	<div id="page">
 		<div id="outerleft">
 			<div id="dotleft">
-				<p><span>TODAY</span><span style="color:red"> 87254</span>
-					<span> | TOTAL 786293</span></p>
+				<p style="font-size: 15px"><span>TODAY</span> <span id="check" style="color:red"></span>
+				<span> | TOTAL <span id="ttlchk"></span></span></p>
 				<iframe id="ifleft" name="leftIf">
 				</iframe>
 			</div>
@@ -41,11 +41,11 @@
 			<p style="text-align:center">자랑 중인 심볼이 없습니다.</p>
 			<hr><span>스크랩 게시물<br></span>
 			<span>즐겨찾기</span>
-			<hr><span style="color:#298FA6;">사용중아이템●소망상자●</span>
+			<hr><span style="color:#298FA6;">사용중아이템</span><br><span style="font-size: 18px"> 소망상자</span>
 		</div>
 		<div id="musicouter">
 			<div id="musicinner">
-				<span>
+				<span style="font-size: 15px">
 				<img src="music.png" width="20px" height="20px"> 비스트-비가 오는 날엔(On Rainy Days)</span>
 			</div>
 			<audio id="music" src="비가오는날엔.mp3" loop controls></audio>
@@ -58,7 +58,9 @@
 	var j=0;
 	var fl=document.getElementById("ifleft");
 	var fr=document.getElementById("ifright");
-	
+	var chk=sessionStorage.getItem("check");
+	var ttl=sessionStorage.getItem("totalcheck");
+
 	function change(e){ //버튼 클릭 시 변경 함수
 		var i=0;
 		var j=0;
@@ -81,6 +83,23 @@
 		var hm=document.getElementById("hm");
 		hm.style.backgroundColor="white";
 		hm.style.color="black"
+		if(chk==null)
+			sessionStorage.setItem("check","0");
+		else{
+			++chk;
+			sessionStorage.setItem("check",chk);
+		}
+		if(ttl==null)
+			sessionStorage.setItem("totalcheck","78562");
+		else{
+			++ttl;
+			sessionStorage.setItem("totalcheck",ttl);
+		}
+		var c=document.getElementById("check");
+		var t=document.getElementById("ttlchk");
+		c.innerHTML=chk;
+		t.innerHTML=ttl;
 	}
+
 </script></body>
 </html>
