@@ -83,22 +83,26 @@
 		var hm=document.getElementById("hm");
 		hm.style.backgroundColor="white";
 		hm.style.color="black"
-		if(chk==null)
-			sessionStorage.setItem("check","0");
+		var c=document.getElementById("check");
+		var t=document.getElementById("ttlchk");
+		if(chk==null){
+			sessionStorage.setItem("check","1");
+			c.innerHTML="1";
+		}
 		else{
 			++chk;
 			sessionStorage.setItem("check",chk);
+			c.innerHTML=chk;
 		}
-		if(ttl==null)
+		if(ttl==null){
 			sessionStorage.setItem("totalcheck","78562");
+			t.innerHTML="78562"
+		}
 		else{
 			++ttl;
 			sessionStorage.setItem("totalcheck",ttl);
+			t.innerHTML=ttl;
 		}
-		var c=document.getElementById("check");
-		var t=document.getElementById("ttlchk");
-		c.innerHTML=chk;
-		t.innerHTML=ttl;
 	}
 
 </script></body>
