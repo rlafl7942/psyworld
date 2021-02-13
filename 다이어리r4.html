@@ -74,13 +74,13 @@
     </style>
     <script>
         const writecmt=(num)=>{
-            const a = document.getElementsByClassName("comt");
-			const list = document.getElementsByClassName("cmtlist");
+            const a = document.querySelector(`#comt${num}`);
+			const list = document.querySelector(`#cmtlist${num}`);
             const plus=document.createElement('p');
-			plus.innerHTML='익명인 : ' + a[num].value;
-            list[num].appendChild(plus);
+			plus.innerHTML='익명인 : ' + a.value;
+            list.appendChild(plus);
         }
-    
+        var cnt=3;
         function newDiarywrite(){
             var title=document.getElementById("diarytitle").value;
             var content=document.getElementById("diarycontent").value;
@@ -88,9 +88,32 @@
             var after=document.getElementById("diary");
             var newDiary=document.createElement("div");
             newDiary.setAttribute('id','diary')
-            newDiary.innerHTML= '<div id="content"><span>'+title+'</span><div id="essay">'+content+'</div><hr style="border-bottom:1px dashed #A6A6A6; border-top:none;"><div id="setting"><text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text></div><hr style="color:#EAEAEA"><div class="comment"><div id="write"><text>댓글 입력 : </text><input class="comt" type="text" name="cmt"><button onclick="writecmt(0)">등록</button></div></div></div>'
+            newDiary.innerHTML=`
+            <div id="content">
+            <span>${title}</span>
+            <div id="essay">
+                ${content}
+            </div>
+            <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
+            <div id="setting">
+                <text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text>
+            </div>
+            <hr style="color:#EAEAEA">
+            <div id="comment${cnt}">
+                <div id="write">
+                    <text>댓글 입력 : </text>
+                    <input id="comt${cnt}" type="text" name="cmt">
+                    <button onclick="writecmt(${cnt})">등록</button>
+                </div>
+                <div id="cmtlist${cnt}">
+                
+                </div>
+            </div>
+        </div>
+            `
             //newDiary.innerHTML=title;
             back.insertBefore(newDiary,after);
+            cnt++;
         }
     </script>
 </head>
@@ -114,26 +137,25 @@
     </div>
     <div id="diary">
         <div id="content">
-            <span>예리의 일기</span>
+            <span>변영화의 일기</span>
             <div id="essay">
-                오늘 글쓰기 기능을 만들다가..<br>
-                몇시간동안 안됐는데..<br>
-                드디어 됐다~!~!히히
+                악 리액트 너무 어렵따~!
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
                 <text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text>
             </div>
             <hr style="color:#EAEAEA">
-            <div class="comment">
+            <div id="comment1">
                 <div id="write">
                     <text>댓글 입력 : </text>
-                    <input class="comt" type="text" name="cmt">
-                    <button onclick="writecmt(0)">등록</button>
+                    <input id="comt1" type="text" name="cmt">
+                    <button onclick="writecmt(1)">등록</button>
                 </div>
-                <div class="cmtlist">
-                <p>부정빈 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
-                <p>변영화 : ㅊㅋㅊㅋ~!~!</p>
+                <div id="cmtlist1">
+                <p>부정빈 : 퍼가염~♡</p>
+                <p>변영화 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>김예리 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
                 </div>
             </div>
         </div>
@@ -141,26 +163,25 @@
 
     <div id="diary">
         <div id="content">
-            <span>영화의 일기</span>
+            <span>부정빈의 일기</span>
             <div id="essay" style="text-align: center;">
-                오늘 언니와 함께 공부하려고 카페에 갔다.<br>
-                그런데 너무 졸렸다..<br>
-                그래도 열심히 했다~!~!
+                폰트가 frog야? 키힠힠킼히키힠ㅎ
             </div>
             <hr style="border-bottom:1px dashed #A6A6A6; border-top:none;">
             <div id="setting">
                 <text style="font-size:22px; color:#A6A6A6">공개설정 : 전체공개</text>
             </div>
             <hr style="color:#EAEAEA">
-            <div class="comment">
+            <div id="comment2">
                 <div id="write">
                     <text>댓글 입력 : </text>
-                    <input class="comt" type="text" name="cmt">
-                    <button onclick="writecmt(1)">등록</button>
+                    <input id="comt2" type="text" name="cmt">
+                    <button onclick="writecmt(2)">등록</button>
                 </div>
-                <div class="cmtlist">
-                <p>김예리 : 정말 멋져~!~!~</p>
-                <p>부정빈 : 쨔스~!</p>
+                <div id="cmtlist2">
+                <p>부정빈 : ㅠㅠ..퍼가염..♡</p>
+                <p>변영화 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
+                <p>김예리 : ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</p>
             </div>
         </div>
     </div>
