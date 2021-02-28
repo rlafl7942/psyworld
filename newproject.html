@@ -73,13 +73,13 @@
 		}
 		e.style.backgroundColor="white"; //클릭 버튼은 흰색으로 변경
 		e.style.color="black"; //폰트 색상 검정으로 변경
-		fl.src=e.innerHTML+"l.html"; //버튼 이름+L 문서 왼쪽에 출력
-		fr.src=e.innerHTML+"r.html"; //버튼 이름+R 문서 오른쪽에 출력
+		fl.src=e.innerHTML+"/"+e.innerHTML+"l.html"; //버튼 이름+L 문서 왼쪽에 출력
+		fr.src=e.innerHTML+"/"+e.innerHTML+"r.html"; //버튼 이름+R 문서 오른쪽에 출력
 	}
 	
 	function onlo(){ //페이지 로드 시 실행 함수
-		fl.src="홈l.html";
-		fr.src="홈r.html";
+		fl.src="홈/홈l.html";
+		fr.src="홈/홈r.html";
 		var hm=document.getElementById("hm");
 		hm.style.backgroundColor="white";
 		hm.style.color="black"
