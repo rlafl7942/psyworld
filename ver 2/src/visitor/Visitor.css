@@ -1,0 +1,110 @@
+body {
+  /*container*/
+  width: 843px;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /*위에서 아래*/
+}
+
+textarea {
+  resize: none;
+  /*height: 160px;*/
+}
+
+textarea:focus {
+  outline: none; /*눌렀을 때 굵어지는 거 없앰*/
+}
+
+.inputText {
+  border: 1px solid #aaabad;
+  width: 580px;
+  height: 160px;
+}
+
+.guest {
+  width: 800px;
+}
+
+.topBtn {
+  width: 800px;
+  height: 20px;
+  margin-top: 1%;
+}
+
+#writing {
+  width: 800px;
+  height: 220px;
+  background-color: #ebebeb;
+  border-top: 1px solid #aaabad;
+  border-bottom: 1px solid #aaabad;
+}
+
+.writingProfileImg {
+  width: 165px;
+  height: 165px;
+}
+
+#writingImgAndText {
+  position: relative;
+  top: 8%;
+  left: 3%;
+}
+
+.writed {
+  width: 800px;
+  height: 500px;
+}
+
+.writedInfo {
+  width: 800px;
+  height: 20px;
+  background-color: #ebebeb;
+  border-top: 1px solid #aaabad;
+  margin-top: 7%;
+
+  padding: 2% 0;
+}
+
+.writedImgAndText {
+  width: 800px;
+  height: 200px;
+  padding: 3%;
+}
+
+.writeComment {
+  width: 765px;
+  /*height: 70px;*/
+  background-color: #ebebeb;
+
+  padding: 2% 2%;
+}
+
+.writedText {
+  border: 0px;
+  width: 580px;
+  height: 160px;
+}
+
+.commentText {
+  border: 1px solid #aaabad;
+  height: 60px;
+  width: 650px;
+  margin-left: 2%;
+}
+
+.marginLeft {
+  margin-left: 2%;
+}
+
+.marginLeftAndColor1 {
+  margin-left: 2%;
+  color: #15336f;
+}
+
+.marginLeftAndColor2 {
+  margin-left: 10px;
+  color: #aaabad;
+}
+
+.floatAndMargin {
+}
