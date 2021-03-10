@@ -9,4 +9,5 @@
   left: 10px;
   border: solid #aaaaaa;
   border-right: none;
+  overflow: auto;
 }

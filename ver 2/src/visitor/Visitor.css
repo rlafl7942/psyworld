@@ -1,6 +1,6 @@
-body {
+.container {
   /*container*/
-  width: 843px;
+  width: 95%;
   display: flex;
   align-items: center;
   flex-direction: column; /*위에서 아래*/
@@ -40,6 +40,7 @@ textarea:focus {
 }
 
 .writingProfileImg {
+  display: inline; /*추가*/
   width: 165px;
   height: 165px;
 }
@@ -80,6 +81,7 @@ textarea:focus {
 }
 
 .writedText {
+  /*display: inline;*/
   border: 0px;
   width: 580px;
   height: 160px;
@@ -107,4 +109,10 @@ textarea:focus {
 }
 
 .floatAndMargin {
+}
+
+.container {
+  /*background-color: #aaabad;*/
+  width: 800px;
+  height: 100%;
 }

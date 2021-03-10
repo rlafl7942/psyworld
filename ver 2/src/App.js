@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import "./App.css";
-//import PhotoR1 from "./photo/PhotoR1";
-import VisitorsBook from "./visitor/VisitorsBook";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>부정빈 틀</h1>
-      {/*<PhotoR1 />*/}
-      <VisitorsBook />
-    </div>
-  );
-=======
 import React, { Component } from "react";
 import "./concept.css";
 import musicimg from "./images/music.png";
@@ -119,7 +106,6 @@ class App extends Component {
       </div>
     );
   }
->>>>>>> feature/concept
 }
 
 export default App;
