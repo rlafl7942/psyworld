@@ -1,0 +1,29 @@
+#container {
+  width: 316px;
+  display: flex;
+  justify-content: center;
+}
+#smallContainer {
+  width: 90%;
+  padding-top: 3%;
+}
+.bold {
+  color: #298fa6;
+  font-weight: bold;
+}
+#diaryList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  border-top: 1px solid grey;
+  flex-direction: column;
+  padding-top: 2%;
+}
+li {
+  height: 5px;
+  width: 100%;
+  font-size: 13px;
+  list-style-position: inside;
+  list-style-image: url("./image/folder.png");
+}
