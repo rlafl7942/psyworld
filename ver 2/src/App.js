@@ -3,8 +3,15 @@ import "./concept.css";
 import musicimg from "./images/music.png";
 import ReactAudioPlayer from "react-audio-player";
 import music from "../src/비가오는날엔.mp3";
-import Iframe from "react-iframe";
+import LeftScreen from "./leftscreen.js";
+import RightScreen from "./rightscreen.js";
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      src: "./homel.html",
+    };
+  }
   render() {
     return (
       <div>
@@ -23,7 +30,7 @@ class App extends Component {
                     |TOTAL <span id="ttlchk"></span>
                   </span>
                 </p>
-                <Iframe title="ifleft" id="ifleft" src="홈l.js"></Iframe>
+                <LeftScreen />
               </div>
             </div>
             <div id="outerright">
@@ -37,7 +44,7 @@ class App extends Component {
                   <button>사진첩</button>
                   <button>방명록</button>
                 </div>
-                <Iframe title="ifright" id="ifright"></Iframe>
+                <RightScreen />
               </div>
             </div>
           </div>

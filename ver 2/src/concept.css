@@ -199,3 +199,7 @@ body {
   border-left: none;
   outline: none;
 }
+#iframe {
+  display: inline-block;
+  position: absolute;
+}
