@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import "./concept.css";
 import musicimg from "./images/music.png";

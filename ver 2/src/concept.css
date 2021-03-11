@@ -3,7 +3,7 @@ html,
 body {
   background-color: #a6a6a6;
   height: 100%;
-  font-family: "돋움";
+  /* font-family: "돋움"; */
   font-weight: bold;
 }
 #page {
@@ -84,9 +84,9 @@ body {
   left: 25px;
 }
 #dotright span {
-  position: absolute;
+  /* position: absolute;
   left: 660px;
-  top: 90px;
+  top: 90px; */
 }
 #ifleft {
   display: inline-block;
