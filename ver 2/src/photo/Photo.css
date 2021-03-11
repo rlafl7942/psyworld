@@ -42,3 +42,7 @@ img {
 .everyBtn {
   color: #bc8e5e;
 }
+
+#container {
+  width: 800px;
+}
