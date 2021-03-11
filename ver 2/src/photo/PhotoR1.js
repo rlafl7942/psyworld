@@ -29,7 +29,7 @@ class PhotoR1 extends Component {
 
   render() {
     return (
-      <>
+      <div id="container">
         <div id="picDiv1" class="pic">
           <div class="picInfo">
             <p
@@ -121,7 +121,7 @@ class PhotoR1 extends Component {
         </div>
 
         <div id="picToPicSpace"></div>
-      </>
+      </div>
     );
   }
 }

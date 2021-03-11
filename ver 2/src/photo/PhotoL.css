@@ -1,0 +1,30 @@
+h3 {
+  color: #8ebdc4;
+}
+
+hr {
+  width: 140px;
+  margin-left: 0px;
+}
+
+ul {
+  margin-left: 0px;
+  width: 140px;
+}
+
+ul li {
+  list-style-image: url("./images/folder.png");
+  /*margin: 5px;*/
+  border: 0px;
+  margin-left: 0px;
+  margin-top: 5px;
+  width: 140px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:active {
+}
