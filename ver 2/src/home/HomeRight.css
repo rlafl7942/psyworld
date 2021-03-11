@@ -59,7 +59,7 @@
   flex-direction: column;
   margin-bottom: 2%;
 }
-img {
+#miniroom > img {
   width: 100%;
   border: 2px solid grey;
 }

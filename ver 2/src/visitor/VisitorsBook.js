@@ -3,7 +3,7 @@ import "./Visitor.css";
 import Book from "./Book";
 import Profile1 from "./images/Profile1.PNG";
 
-const VisitorsBook = () => {
+const VisitorsBook = ({ photo }) => {
   const [visits, setVisits] = useState([
     {
       id: 1,
@@ -43,17 +43,19 @@ const VisitorsBook = () => {
   console.log(visits.length);
   console.log(visits[visits.length - 1]);
   return (
-    <>
-      <WritingZone
-        inputText={inputText}
-        onChange={onChange}
-        onClick={onClick}
-      />
+    <div className="container">
+      <div>
+        <WritingZone
+          inputText={inputText}
+          onChange={onChange}
+          onClick={onClick}
+        />
+      </div>
       {/*<input value={inputText} onChange={onChange} />*/}
       {/*<button onClick={onClick}>추가</button>*/}
-      {visitList}
+      <div>{visitList}</div>
       {/*<Book currentVisit={visits[visits.length - 1]} />*/}
-    </>
+    </div>
   );
 };
 
@@ -104,6 +106,7 @@ const WritingZone = ({ inputText, onChange, onClick }) => {
               float: "right",
               marginRight: "3%",
               marginTop: "2.5%",
+              //height: "100px",
             }}
             onClick={onClick}
           >

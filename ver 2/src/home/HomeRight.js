@@ -43,7 +43,7 @@ class HomeRight extends Component {
         </div>
         <div id="miniroom">
           <span class="bold">Miniroom</span>
-          <img src={img} />
+          <img src={img} alt="miniroom" />
         </div>
         <div id="friendSay">
           <span class="bold">What Friends Say</span>

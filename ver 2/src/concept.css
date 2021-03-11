@@ -3,8 +3,6 @@ html,
 body {
   background-color: #a6a6a6;
   height: 100%;
-  /* font-family: "돋움"; */
-  font-weight: bold;
 }
 #page {
   display: inline-block;
@@ -44,7 +42,6 @@ body {
   width: 68%;
   height: 100%;
   position: relative;
-  right: 7px;
 }
 #dotleft {
   display: inline-block;
@@ -77,16 +74,16 @@ body {
   padding: 10px 10px 10px 0px;
   border-left: none;
 }
-#dotright h1 {
+#dotright > h1 {
   display: inline-block;
   color: #298fa6;
   position: absolute;
   left: 25px;
 }
-#dotright span {
-  /* position: absolute;
-  left: 660px;
-  top: 90px; */
+#dotright > span {
+  position: absolute;
+  left: 630px;
+  top: 90px;
 }
 #ifleft {
   display: inline-block;
@@ -137,7 +134,7 @@ body {
   border-radius: 10px;
   position: absolute;
   top: 70px;
-  font-size: 22px;
+  font-size: 20px;
 }
 #underhb span {
   margin-left: 10px;

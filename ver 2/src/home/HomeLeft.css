@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  position: absolute;
   flex-direction: column;
 }
 #today {
