@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./concept.css";
+import "./App.css";
 import musicimg from "./images/music.png";
 import ReactAudioPlayer from "react-audio-player";
 import music from "../src/비가오는날엔.mp3";
@@ -11,6 +11,9 @@ class App extends Component {
     this.state = {
       src: "./homel.html",
     };
+  }
+  click() {
+    alert("hello");
   }
   render() {
     return (
@@ -38,7 +41,9 @@ class App extends Component {
                 <h1>학교라는 감ok... 벗어난 ㄷr...</h1>
                 <span>www.psyworld.com/project</span>
                 <div id="button">
-                  <button id="hm">홈</button>
+                  <button id="hm" onClick="click()">
+                    홈
+                  </button>
                   <button>프로필</button>
                   <button>다이어리</button>
                   <button>사진첩</button>
@@ -95,7 +100,7 @@ class App extends Component {
               <div id="musicinner">
                 <span style={{ fontSize: "15px" }}>
                   <img src={musicimg} alt="music" width="20px" height="20px" />
-                  비스트-비가 오는 날엔(On Rainy Days)
+                  &nbsp;&nbsp;비스트-비가 오는 날엔(On Rainy Days)
                 </span>
               </div>
               <ReactAudioPlayer id="music" src={music} autoPlay controls />
