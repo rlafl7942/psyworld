@@ -20,7 +20,7 @@ const CreateOnelineSay = (props) => {
 class HomeRight extends Component {
   render() {
     return (
-      <div id="container">
+      <div id="rightcontainer">
         <div id="news">
           <span class="bold">Updated news</span>
           <div id="newsBox">

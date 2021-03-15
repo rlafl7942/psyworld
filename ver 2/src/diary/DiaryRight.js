@@ -123,7 +123,7 @@ class CreateDiary extends Component {
 class DiaryRight extends Component {
   render() {
     return (
-      <div id="container">
+      <div id="diaryRightContainer">
         <Writing />
       </div>
     );
