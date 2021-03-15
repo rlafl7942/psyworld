@@ -1,10 +1,11 @@
 h3 {
   color: #8ebdc4;
+  margin-left: 10px;
 }
 
 hr {
   width: 140px;
-  margin-left: 0px;
+  margin-left: 10px;
 }
 
 ul {
@@ -24,6 +25,11 @@ ul li {
 a {
   color: black;
   text-decoration: none;
+}
+
+#mainDiv {
+  width: 316px;
+  height: 300px;
 }
 
 a:active {
