@@ -8,4 +8,5 @@
   left: 20px;
   top: 65px;
   border: solid #aaaaaa;
+  overflow: auto;
 }
