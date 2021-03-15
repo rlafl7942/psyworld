@@ -87,7 +87,7 @@ class PsyInfo extends Component {
 class HomeLeft extends Component {
   render() {
     return (
-      <div id="container">
+      <div id="leftcontainer">
         <Today />
         <img src={img_1} width="50%" height="50%" />
         <Info />

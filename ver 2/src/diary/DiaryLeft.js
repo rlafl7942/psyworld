@@ -4,7 +4,7 @@ import "./DiaryLeft.css";
 class DiaryLeft extends Component {
   render() {
     return (
-      <div id="container">
+      <div id="diaryLeftContainer">
         <div id="smallContainer">
           <span class="bold">DIARY</span>
           <div id="diaryList">
