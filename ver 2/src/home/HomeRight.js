@@ -13,11 +13,23 @@ const CreateList = (props) => {
   );
 };
 
-const CreateOnelineSay = (props) => {
-  return <li>{props.content}</li>;
-};
-
 class HomeRight extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { onelineSay: "" };
+    this.setOnelineSay = this.setOnelineSay.bind(this);
+    this.addOneLineSay = this.addOneLineSay.bind(this);
+  }
+  setOnelineSay(e) {
+    this.setState({ onelineSay: e.target.value });
+  }
+  addOneLineSay() {
+    const creating = document.getElementById("sayList");
+    const li = document.createElement("li");
+    li.innerHTML = `익명인 : ${this.state.onelineSay}`;
+    creating.appendChild(li);
+    this.setState({ onelineSay: "" });
+  }
   render() {
     return (
       <div id="rightcontainer">
@@ -49,14 +61,15 @@ class HomeRight extends Component {
           <span class="bold">What Friends Say</span>
           <div id="inputSay">
             <span class="bold">Friends Say</span>
-            <input type="text"></input>
-            <button>확인</button>
+            <input
+              placeholder="내용을 입력하세요."
+              value={this.state.onelineSay}
+              onChange={this.setOnelineSay}
+            />
+            <button onClick={this.addOneLineSay}>확인</button>
           </div>
           <div id="sayList">
-            <CreateOnelineSay content="김예리 들렀다감~" />
-            <CreateOnelineSay content="김예리 들렀다감~" />
-            <CreateOnelineSay content="김예리 들렀다감~" />
-            <CreateOnelineSay content="김예리 들렀다감~" />
+            <li>김예리 : 들렸다갑니다용~ </li>
           </div>
         </div>
       </div>

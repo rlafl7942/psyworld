@@ -47,6 +47,7 @@ class Writing extends Component {
                 제목 :
               </span>
               <textarea
+                placeholder="제목을 입력하세요."
                 id="diaryTitle"
                 rows="1"
                 cols="54"
@@ -58,6 +59,7 @@ class Writing extends Component {
             <div id="writeAbout">
               <span style={{ marginRight: "4%" }}>다이어리 내용 :</span>
               <textarea
+                placeholder="내용을 입력하세요."
                 id="diaryContent"
                 rows="5"
                 cols="54"
@@ -102,14 +104,19 @@ class CreateDiary extends Component {
           <br />
           <div>{this.props.new.content}</div>
           <br />
-          <hr style={{ borderBottom: "1px dashed #A6A6A6" }} />
+          <hr style={{ borderBottom: "1px dashed #A6A6A6", width: "100%" }} />
           <div id="setting">공개설정 : 전체공개</div>
-          <hr style={{ borderBottom: "1px solid grey" }} />
+          <hr style={{ borderBottom: "1px solid grey", width: "100%" }} />
         </div>
         <div id="comment" class="comment">
           <div id="cmtWrite">
             댓글 입력 :
-            <input id="cmt" value={this.state.cmt} onChange={this.setCmt} />
+            <input
+              id="cmt"
+              placeholder="댓글을 입력하세요."
+              value={this.state.cmt}
+              onChange={this.setCmt}
+            />
             <button onClick={this.addCmt}>등록</button>
             {/*</div>
           <div id="cmtList" class="cmtList">*/}
