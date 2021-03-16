@@ -40,21 +40,32 @@ class Info extends Component {
 
     this.state = {
       infoValue: "어떻할거ㄴF구.... OTL",
-      textareaValue: "Write here",
+      editValue: "",
     };
     this.ClickedEdit = this.ClickedEdit.bind(this);
   }
   ClickedEdit() {
     const input = document.createElement("input");
-    const edit = document.getElementsByClassName("edit");
-    edit[0].innerHTML = <div dangerouslySetInnerHTML={{ __html: input }} />;
+    const button = document.createElement("button");
+    const edit = document.getElementById("editView");
+    button.style.width = "40px";
+    button.style.height = "20px";
+    button.innerHTML = "등록";
+    input.placeholder = "내용을 입력하세요.";
+    edit.appendChild(input);
+    edit.appendChild(button);
+    button.addEventListener("click", () => {
+      this.setState({ infoValue: input.value });
+      edit.removeChild(input);
+      edit.removeChild(button);
+    });
   }
   render() {
     return (
       <>
         <div id="info">
           {this.state.infoValue}
-          <div class="edit"></div>
+          <div id="editView"></div>
         </div>
 
         <div id="edit">
