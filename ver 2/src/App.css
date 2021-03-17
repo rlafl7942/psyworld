@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap");
 html,
-/* body {
-  background-color: #a6a6a6; 
+body {
+  background-color: #a6a6a6;
   height: 100%;
-} */
+}
 #page {
   display: inline-block;
   width: 1400px;
@@ -18,7 +18,7 @@ html,
   height: 600px;
   position: relative;
   left: 45px;
-  bottom: 260px;
+  bottom: 177px;
 }
 #outerleft {
   display: inline-block;
@@ -56,7 +56,6 @@ html,
   border-right: none;
   position: relative;
   left: 25px;
-  overflow: auto;/**/
 }
 #dotleft p {
   display: inline-block;
@@ -74,7 +73,6 @@ html,
   margin: 30px 30px 30px 0px;
   padding: 10px 10px 10px 0px;
   border-left: none;
-  overflow: auto;/**/
 }
 #dotright > h1 {
   display: inline-block;
@@ -175,6 +173,38 @@ html,
   position: relative;
   top: 10px;
 }
+#button button:focus {
+  border-left: none;
+  outline: none;
+}
+#iframe {
+  display: inline-block;
+  position: absolute;
+}
+#ifleft {
+  display: inline-block;
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+  position: relative;
+  left: 20px;
+  top: 65px;
+  border: solid #aaaaaa;
+}
+#ifright {
+  display: inline-block;
+  background-color: white;
+  width: 95%;
+  height: 90%;
+  border-radius: 20px;
+  position: relative;
+  top: 65px;
+  left: 10px;
+  border: solid #aaaaaa;
+  border-right: none;
+  overflow: auto;
+}
 #button {
   display: inline-block;
   position: absolute;
@@ -193,21 +223,4 @@ html,
   margin: 3px;
   margin-left: 0px;
   font-size: 20px;
-}
-#button button:focus {
-  border-left: none;
-  outline: none;
-}
-#iframe {
-  display: inline-block;
-  position: absolute;
-}
-
-#mainContainer {
-  background-color: #a6a6a6; 
-  width: 1920px;
-  height: 1080px; 
-  position: absolute; 
-  left: 0px;
-  overflow: auto;
 }

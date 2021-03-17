@@ -2,6 +2,7 @@
   width: 316px;
   display: flex;
   justify-content: center;
+  position: absolute;
 }
 #smallContainer {
   width: 90%;
