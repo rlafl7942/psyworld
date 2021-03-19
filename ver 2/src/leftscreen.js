@@ -2,25 +2,18 @@ import React, { Component } from "react";
 import "./leftscreen.css";
 import HomeLeft from "./home/HomeLeft.js";
 import PhotoL from "./photo/PhotoL";
-
+import DiaryLeft from "./diary/DiaryLeft.js";
+import ProfileLeft from "./profile/profileleft.js";
+import { Route } from "react-router-dom";
 class LeftScreen extends Component {
   render() {
-    let screenState = this.props.rightScreenState;
     return (
       <div id="ifleft">
-        {screenState === 1 ? (
-          <HomeLeft />
-        ) : screenState === 2 ? (
-          <></>
-        ) : screenState === 3 ? (
-          <></>
-        ) : screenState === 4 ? (
-          <PhotoL screenState={screenState} />
-        ) : screenState === 5 ? (
-          <HomeLeft />
-        ) : (
-          <></>
-        )}
+        <Route path="/" component={HomeLeft} exact />
+        <Route path="/home" component={HomeLeft} />
+        <Route path="/diary" component={DiaryLeft} />
+        <Route path="/profile" component={ProfileLeft} />
+        <Route path="/photo" component={PhotoL} />
       </div>
     );
   }
