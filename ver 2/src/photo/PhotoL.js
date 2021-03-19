@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PhotoL.css";
+import { Link, BrowserRouter, Route } from "react-router-dom";
 
 let OBJECT_BOLD = null;
 
@@ -16,18 +17,13 @@ const PhotoL = ({ screenState }) => {
   };
 
   useEffect(() => {
-    changeToBold(1);
+    //changeToBold(1);
   });
 
-  const [changeFolder, SetChangeFolder] = useState(1);
-
-  const onClickFolder = (idx) => {
-    SetChangeFolder(idx);
-    console.log(changeFolder);
-  };
+  const [boldFont, setBoldFont] = useState(1);
 
   return (
-    <div id="mainDiv" onLoad={() => changeToBold(1)}>
+    <div id="mainDiv">
       <div>
         <h3>PHOTO ALBUM</h3>
         <hr />
@@ -35,54 +31,46 @@ const PhotoL = ({ screenState }) => {
 
       <div>
         <ul>
-          <li>
-            <a
-              //href="#"
+          <Link to="/photo/r1" onClick={() => setBoldFont(1)}>
+            <li
               id="1"
-              onClick={() => {
-                changeToBold(1);
-                onClickFolder(1);
-              }}
+              style={
+                boldFont === 1 ? { fontWeight: "bold" } : { fontWeight: "" }
+              }
             >
               좋은 시간
-            </a>
-          </li>
-          <li>
-            <a
-              //href="#"
+            </li>
+          </Link>
+          <Link to="/photo/r2" onClick={() => setBoldFont(2)}>
+            <li
               id="2"
-              onClick={() => {
-                changeToBold(2);
-                onClickFolder(2);
-              }}
+              style={
+                boldFont === 2 ? { fontWeight: "bold" } : { fontWeight: "" }
+              }
             >
               좋은 사람들
-            </a>
-          </li>
-          <li>
-            <a
-              //href="#"
+            </li>
+          </Link>
+          <Link to="/photo/r3" onClick={() => setBoldFont(3)}>
+            <li
               id="3"
-              onClick={() => {
-                changeToBold(3);
-                onClickFolder(3);
-              }}
+              style={
+                boldFont === 3 ? { fontWeight: "bold" } : { fontWeight: "" }
+              }
             >
               좋은 추억
-            </a>
-          </li>
-          <li>
-            <a
-              //href="#"
+            </li>
+          </Link>
+          <Link to="/photo/r4" onClick={() => setBoldFont(4)}>
+            <li
               id="4"
-              onClick={() => {
-                changeToBold(4);
-                onClickFolder(4);
-              }}
+              style={
+                boldFont === 4 ? { fontWeight: "bold" } : { fontWeight: "" }
+              }
             >
               또 하나 알아간다..
-            </a>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>

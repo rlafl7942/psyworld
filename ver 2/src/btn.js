@@ -15,86 +15,61 @@ class Btn extends Component {
   render() {
     return (
       <React.Fragment>
-        <button
-          style={{
-            backgroundColor: this.state.toggle === 1 ? "white" : "#298fa6",
-          }}
-          onClick={() => this.changetoggle(1)}
-        >
-          <Link
-            to="/home"
+        <Link to="/home" onClick={() => this.changetoggle(1)}>
+          <button
             style={{
+              backgroundColor: this.state.toggle === 1 ? "white" : "#298fa6",
               color: this.state.toggle === 1 ? "#298fa6" : "white",
             }}
             onClick={() => this.changetoggle(1)}
           >
             홈
-          </Link>
-        </button>
-        <button
-          style={{
-            backgroundColor: this.state.toggle === 2 ? "white" : "#298fa6",
-          }}
-          onClick={() => this.changetoggle(2)}
-        >
-          <Link
-            to="/profile"
+          </button>
+        </Link>
+        <Link to="/profile" onClick={() => this.changetoggle(2)}>
+          <button
             style={{
+              backgroundColor: this.state.toggle === 2 ? "white" : "#298fa6",
               color: this.state.toggle === 2 ? "#298fa6" : "white",
             }}
             onClick={() => this.changetoggle(2)}
           >
             프로필
-          </Link>
-        </button>
-        <button
-          style={{
-            backgroundColor: this.state.toggle === 3 ? "white" : "#298fa6",
-          }}
-          onClick={() => this.changetoggle(3)}
-        >
-          <Link
-            to="/diary"
+          </button>
+        </Link>
+        <Link to="/diary" onClick={() => this.changetoggle(3)}>
+          <button
             style={{
+              backgroundColor: this.state.toggle === 3 ? "white" : "#298fa6",
               color: this.state.toggle === 3 ? "#298fa6" : "white",
             }}
             onClick={() => this.changetoggle(3)}
           >
             다이어리
-          </Link>
-        </button>
-        <button
-          style={{
-            backgroundColor: this.state.toggle === 4 ? "white" : "#298fa6",
-          }}
-          onClick={() => this.changetoggle(4)}
-        >
-          <Link
-            to="/photo"
+          </button>
+        </Link>
+        <Link to="/photo" onClick={() => this.changetoggle(4)}>
+          <button
             style={{
+              backgroundColor: this.state.toggle === 4 ? "white" : "#298fa6",
               color: this.state.toggle === 4 ? "#298fa6" : "white",
             }}
             onClick={() => this.changetoggle(4)}
           >
             사진첩
-          </Link>
-        </button>
-        <button
-          style={{
-            backgroundColor: this.state.toggle === 5 ? "white" : "#298fa6",
-          }}
-          onClick={() => this.changetoggle(5)}
-        >
-          <Link
-            to="/visitor"
+          </button>
+        </Link>
+        <Link to="/visitors" onClick={() => this.changetoggle(5)}>
+          <button
             style={{
+              backgroundColor: this.state.toggle === 5 ? "white" : "#298fa6",
               color: this.state.toggle === 5 ? "#298fa6" : "white",
             }}
             onClick={() => this.changetoggle(5)}
           >
             방명록
-          </Link>
-        </button>
+          </button>
+        </Link>
       </React.Fragment>
     );
   }
