@@ -14,6 +14,7 @@ class LeftScreen extends Component {
         <Route path="/diary" component={DiaryLeft} />
         <Route path="/profile" component={ProfileLeft} />
         <Route path="/photo" component={PhotoL} />
+        <Route path="/visitors" component={HomeLeft} />
       </div>
     );
   }
