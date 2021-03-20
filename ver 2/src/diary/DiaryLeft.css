@@ -21,10 +21,13 @@
   flex-direction: column;
   padding-top: 2%;
 }
-li {
-  height: 5px;
+.list {
+  height: 10px;
   width: 100%;
-  font-size: 13px;
   list-style-position: inside;
   list-style-image: url("./image/folder.png");
+  border: none;
+}
+#inList {
+  display: none;
 }
