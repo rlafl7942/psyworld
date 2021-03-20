@@ -11,8 +11,8 @@ class Writing extends Component {
       DiaryInfo: [
         {
           id: 0,
-          title: "내 다이어리",
-          content: "내 다이어리입니다아앙~",
+          title: "오잉",
+          content: "피자먹고싶당..",
         },
       ],
     };
@@ -127,7 +127,7 @@ class CreateDiary extends Component {
   }
 }
 
-class DiaryRight extends Component {
+class DiaryRight3 extends Component {
   render() {
     return (
       <div id="diaryRightContainer">
@@ -137,4 +137,4 @@ class DiaryRight extends Component {
   }
 }
 
-export default DiaryRight;
+export default DiaryRight3;
