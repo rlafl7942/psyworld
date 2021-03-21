@@ -100,10 +100,24 @@ class App extends Component {
             </div>
             <div id="musicouter">
               <div id="musicinner">
-                <span style={{ fontSize: "15px" }}>
-                  <img src={musicimg} alt="music" width="20px" height="20px" />
-                  &nbsp;&nbsp;비스트-비가 오는 날엔(On Rainy Days)
-                </span>
+                <div
+                  style={{
+                    fontSize: "15px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  <img
+                    src={musicimg}
+                    alt="music"
+                    width="20px"
+                    height="20px"
+                    style={{ margin: "10px" }}
+                  />
+                  비스트-비가 오는 날엔(On Rainy Days)
+                </div>
               </div>
               <ReactAudioPlayer id="music" src={music} autoPlay controls />
             </div>

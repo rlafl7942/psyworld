@@ -1,11 +1,8 @@
 import React from "react";
 
-const Profile = () => {
-  return (
-    <div>
-      <h1>profile</h1>
-    </div>
-  );
-};
+class ProfileLeft extends Component {
+  render() {
+    
+}
 
-export default Profile;
+export default ProfileLeft;
